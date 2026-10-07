@@ -1,13 +1,25 @@
+/**Mobile style first**/
+:root {
+    --engDeptGreen: #505A2F;
+    --black: #000;
+}
+
 body {
     background-color: #292827;
     font-family: Arial, Helvetica, sans-serif;
 
-    div.container {
-
-        width: 780px;
-        border: 5px solid red;
+    div.container { /* Container div */
+        min-width: 390px;
+        max-width: 780px;
         margin: 0 auto;
         background-color: #fff;
+
+        header {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
 
         section.middle {
             min-height: 500px;
@@ -18,12 +30,12 @@ body {
 
 
             > nav {
-                text-align: right;
+                text-align: center;
                 font-size: 10px;
                 text-transform: uppercase;
 
                 a {
-                    color: #000;
+                    color: var(--black);
                     border-right: 1px solid black;
                     padding-right: 5px;
                     margin-right: 5px;
@@ -42,110 +54,108 @@ body {
                     }
                 }
 
-                &.bottom {
-                    text-transform: lowercase;
+                &.drop-down-menu {
+                    border: 1px solid black;
+                    margin-top: 10px;
+
+                    select {
+                        width: 100%;
+
+
+                    }
+                }
+            }
+
+            &.bottom {
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    div.green-box {
+        min-height: 400px;
+        background-color: #CBCCB3;
+        padding: 10px;
+        margin: 10px 0 100px;
+        border-radius: 10px;
+
+        aside {
+            &.left-side {
+                display: none;
+
+                nav {
+
                 }
             }
         }
 
-        div.green-box {
-            min-height: 400px;
-            background-color: #CBCCB3;
-            padding: 20px 30px;
-            margin: 10px 0 100px;
-            border-radius: 10px;
+        main {
+            background-color: #FFF;
+            padding: 10px;
 
-            aside {
-                /*border: 1px solid black;*/
+            img {
+                width: 100%;
+            }
+        }
 
+    }
 
-                &.left {
-                    float: left;
-                    width: 30%;
-                    min-height: 800px;
-                    position: relative;
+    footer {
+        background-color: #606543;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+        padding: 10px 0;
 
+    }
 
-                    nav {
-                        padding: 0 20px;
+    /*Tablet and up overrides*/
+    @media screen and  (width >= 600px) {
+        /*A breakpoint*/
 
-                        a {
-                            display: block;
-                            border-bottom: 2px solid #757C4A;
-                            padding: 10px 0 10px 15px;
-                            color: black;
-                            text-decoration: none;
-                            text-transform: uppercase;
-                            font-size: 10px;
+        section.middle {
+            > nav { /* nav child*/
+                text-align: right; /*override the mobile property*/
 
-                            &:hover {
-                                color: white;
-                                background-color: #505A2F;
+                &.drop-down-menu {
+                    display: none;
+                }
+            }
 
+            div.green-box {
+                padding: 20px 30px;
+
+                aside {
+                    &.left-side {
+                        display: block;
+                        float: left;
+                        width: 33%;
+
+                        nav {
+                            a {
+                                display: block;
+                                text-transform: uppercase;
+                                font-size: 10px;
+                                color: var(--black);
+                                border-bottom: 2px solid var(--engDeptGreen);
+                                text-decoration: none;
+                                padding: 10px 0 10px 10px;
+
+                                &:hover {
+                                    background-color: var(--engDeptGreen);
+                                    color: #fff;
+                                }
                             }
-
-
                         }
                     }
-
-                    div.links {
-                        margin-top: 40px;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                    }
-
                 }
 
-                &.right {
+                main {
                     float: right;
                     width: 60%;
-                    background-color: #fff;
-                    padding: 10px;
-
-                    img {
-                        width: 100%;
-                    }
-
-                    span {
-
-                    }
-
-                    h1 {
-                        color: #757C4A;
-                        border-bottom: 2px dashed #A12D37;
-                        font-size: 16px;
-                        text-transform: uppercase;
-                        font-weight: normal;
-
-                    }
-
-                    p {
-                        font-size: 12px;
-
-                        &.link {
-                            text-align: right;
-
-                            a {
-                                color: red;
-
-                            }
-                        }
-
-                    }
                 }
             }
-
-
-        }
-
-        footer {
-            background-color: #606543;
-            text-align: center;
-            color: white;
-            font-size: 10px;
-            padding: 10px 0;
-
         }
     }
 }
+
