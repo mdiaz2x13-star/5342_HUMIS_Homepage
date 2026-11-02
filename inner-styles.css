@@ -40,7 +40,10 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                background-color: white;
+                padding: 20px 35px;
                 /*height: 100%;*/
+
 
                 nav.drop-down-menu {
                     display: flex;
@@ -102,7 +105,30 @@ body {
                 }
 
                 main {
-                    padding: 30px;
+                    padding: 15px 10px;
+                    min-height: 650px;
+                }
+
+                main h2 {
+                    color: #c8102e;
+                    font-size: 27px;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+
+                }
+
+                .content {
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                }
+
+                .content strong {
+                    font-weight: bold;
+                }
+
+                .content p {
+                    line-height: 15px;
+                    margin: 0;
                 }
             }
         }
@@ -119,7 +145,10 @@ body {
         /* Tablet and up overrides */
         @media screen and (width >= 600px) {
             section.middle {
+                display: flex;
                 flex-direction: row;
+                min-height: calc(100vh - 100px);
+
 
                 div.left-side {
                     display: flex;
@@ -164,6 +193,8 @@ body {
 
                 section.inner {
                     width: 70%;
+                    display: flex;
+                    flex-direction: column;
 
                     nav.drop-down-menu {
                         display: none;
@@ -175,6 +206,14 @@ body {
 
                     main {
                         min-height: 500px;
+                        flex:1;
+                    }
+                    nav.minor.top{
+                        justify-content: flex-end;
+                        margin-bottom: 30px;
+                    }
+                    nav.minor.bottom{
+                        justify-content: flex-end;
                     }
                 }
             }

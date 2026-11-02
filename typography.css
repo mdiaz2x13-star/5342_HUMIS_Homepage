@@ -28,6 +28,7 @@ main {
     }
 
     h4 {
+        color: black;
         font-size: 1.125rem;
     }
 
@@ -37,5 +38,8 @@ main {
 
     h6 {
         font-size: 0.875rem;
+    }
+    p{
+        font-size: 1rem;
     }
 }
