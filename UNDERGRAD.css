@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body section.container{
+body section.container {
     width: 100%;
     max-width: 780px;
 
@@ -10,44 +10,112 @@ body section.container{
 
 @media screen and (min-width: 600px) {
     body section.container section.middle .left-side {
-        width: 30%;
+        width: 28%;
 
     }
 
     body section.container section.middle section.inner {
-        width: 70%;
+        width: 72%;
         min-width: 0;
-        padding: 0 20px 0 0;
+        padding: 0 14px 0 0;
     }
+
     body section.container section.middle main.Undergrad {
         display: flex;
         flex-direction: column;
         padding: 20px 30px;
-        min-height:900px;
-        min-width:0;
+        min-height: 900px;
+        min-width: 0;
 
     }
-    .Undergrad h1{
+
+    .Undergrad h1 {
         color: #c8102e;
-        font-size: 50px;
+        font-size: clamp(24px, 3.5vw, 40px);
         font-weight: bold;
-        margin:0 0 25px;
+        margin: 0 0 20px;
         line-height: 1.1;
-        white-space: nowrap;
-        border-bottom: 15px solid #c8102e;
+        white-space: normal;
+        border-bottom: 12px solid #c8102e;
     }
-    .Undergrad-Contents{
+
+    .Undergrad-Contents {
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        gap: 24px;
-        flex:1;
-        min-width: 0;
+        gap: 25px;
+
     }
-    .Undergrad .middle-col{
-        flex:0 0 32%;
+
+    .Undergrad .middle-col {
+        flex: 0 0 32%;
         min-width: 0;
-        border-right: 1px dashed #c8102e;
+        width: auto;
+        border-right: 2px dashed black;
+        border-bottom: none;
         padding-right: 15px;
+    }
+
+    .Undergrad .middle-col a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        margin-bottom: 9px;
+    }
+
+    .Undergrad .middle-col a:hover {
+        color: #c8102e;
+    }
+
+    .Undergrad .right-col {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+
+    }
+
+    .Student-sitting {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+        margin-bottom:20px;
+    }
+
+    .Undergrad .right-col p {
+        text-align: justify;
+        margin: 0 0 20px;
+    }
+
+    .more-reasons {
+        color: #A12D37;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+}
+
+
+@media screen and (max-width:599px){
+    .Undergrad-Contents {
+        flex-direction: column;
+    }
+    .Undergrad .middle-col {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px dashed black;
+        padding-bottom: 16px;
+    }
+    .Undergrad .right-col{
+        width: 100%;
+    }
+    .Undergrad h1{
+        font-size:24px;
+        white-space: normal;
+
     }
 }
