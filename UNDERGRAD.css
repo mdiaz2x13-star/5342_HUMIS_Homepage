@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body section.container{
+    width: 100%;
+    max-width: 780px;
+
+}
+
+@media screen and (min-width: 600px) {
+    body section.container section.middle .left-side {
+        width: 30%;
+
+    }
+
+    body section.container section.middle section.inner {
+        width: 70%;
+        min-width: 0;
+        padding: 0 20px 0 0;
+    }
+    body section.container section.middle main.Undergrad {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+        min-height:900px;
+        min-width:0;
+
+    }
+    .Undergrad h1{
+        color: #c8102e;
+        font-size: 50px;
+        font-weight: bold;
+        margin:0 0 25px;
+        line-height: 1.1;
+        white-space: nowrap;
+        border-bottom: 15px solid #c8102e;
+    }
+    .Undergrad-Contents{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 24px;
+        flex:1;
+        min-width: 0;
+    }
+    .Undergrad .middle-col{
+        flex:0 0 32%;
+        min-width: 0;
+        border-right: 1px dashed #c8102e;
+        padding-right: 15px;
+    }
+}
